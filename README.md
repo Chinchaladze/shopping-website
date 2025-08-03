@@ -2,7 +2,7 @@
 
 ---
 
-## 🚀 Features
+## 🚀 About
 
 This project was built to practice my skills by replicating a design from **Figma**.
 

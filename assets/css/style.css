@@ -112,18 +112,18 @@ body {
 }
 .brands-section {
     margin-top: 65px;
-    background-color: #EBD96B; /* ფონის ფერი, როგორც სურათზეა */
+    background-color: #EBD96B;
     padding: 3rem 0;
 }
 .brands-container {
-    display: flex; /* Flexbox-ის გააქტიურება */
+    display: flex; 
     justify-content: space-between; /* ლოგოების თანაბრად განაწილება */
     align-items: center; /* ლოგოების ვერტიკალურად გასწორება */
     flex-wrap: wrap; /* საშუალებას აძლევს ლოგოებს, ახალ ხაზზე გადავიდნენ */
     gap: 2rem; /* მობილურ ვერსიაზე დაშორება ლოგოებს შორის */
 }
 .brand-logo {
-    height: 50px; /* ლოგოების სიმაღლე */
+    height: 50px; 
     filter: grayscale(100%); /* სურვილისამებრ, ლოგოების მონოქრომულობა */
     opacity: 0.6; /* სურვილისამებრ, ლოგოების გამჭვირვალობა */
     transition: opacity 0.3s ease; /* ანიმაცია გადატარებისას */
@@ -131,6 +131,185 @@ body {
 .brand-logo:hover {
     opacity: 1; /* სრული გამჭვირვალობა გადატარებისას */
     filter: grayscale(0%); /* ფერების დაბრუნება გადატარებისას */
+}
+.arrivals-section {
+    padding: 4rem 0;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.section-title-highlight {
+    background-color: #ffe66d;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+}
+.cards-container {
+    display: flex; /* Flexbox-ის გააქტიურება */
+    justify-content: space-between; /* ბარათების თანაბრად განაწილება */
+    gap: 2rem; /* დაშორება ბარათებს შორის */
+}
+.card {
+    border-radius: 20px;
+    overflow: hidden; /* სურათის კუთხეების მომრგვალება */
+    display: flex;
+    flex-direction: column;
+}
+.card-image-wrapper {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.explore-link {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.explore-link .arrow {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.explore-link:hover .arrow {
+    transform: translateX(5px);
+}
+.community-section {
+    background-color: #E5C643; /* ყვითელი ფონი */
+    padding: 70px 0;
+    text-align: center; /* ტექსტის ცენტრში გასწორება */
+}
+.community-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* შიგნით არსებული ელემენტების ცენტრში გასწორება */
+    gap: 0.5rem; /* დაშორება ელემენტებს შორის */
+}
+.community-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin: 0px;
+}
+.community-subtitle {
+    font-size: 18px;
+    color: #FFFCF8;
+}
+.community-form {
+    display: flex;
+    gap: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden; /* ფორმის კუთხეების მომრგვალება */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+.community-input {
+    flex: 1; /* იკავებს დარჩენილ სივრცეს */
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+.community-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.community-button:hover {
+    background-color: #4d4d4d;
+}
+.main-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 5rem 0;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* სვეტების ზომების განაწილება */
+    gap: 2rem;
+}
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.footer-description {
+    color: #a0a0a0;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+.footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #fff;
+}
+/* responsive სტილები */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr; /* ტაბლეტზე ორი სვეტი */
+    }
+    
+    .footer-column-1 {
+        grid-column: 1 / span 2; /* პირველი სვეტი მთელ სიგანეზე გაიშლება */
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* მობილურზე ერთი სვეტი */
+        text-align: center;
+    }
+    
+    .footer-column-1 {
+        grid-column: unset;
+    }
+    
+    .social-links {
+        justify-content: center; /* სოციალური ლინკების ცენტრში განთავსება */
+    }
 }
 @media screen and (max-width: 1150px) {
     .hero_section {
@@ -186,6 +365,16 @@ body {
         font-weight: bold;
     }
 }
+@media (max-width: 990px) {
+    .cards-container {
+        flex-direction: column; /* ბარათები ერთმანეთის ქვეშ განთავსდება */
+        gap: 1.5rem;
+    }
+    .card {
+        flex: unset; /* ვაუქმებთ flex: 1-ს */
+        width: 100%; /* ბარათის სიგანე სრულდება */
+    }
+}
 @media (max-width: 768px) {
     .brands-container {
         justify-content: center; /* ლოგოების ცენტრში განთავსება */
@@ -198,6 +387,21 @@ body {
 @media (max-width: 580px) {
     .hero-title {
         font-size: 2.5rem;
+    }
+}
+@media (max-width: 576px) {
+    .community-title {
+        font-size: 2rem;
+    }
+    .community-form {
+        flex-direction: column; /* მობილურზე ფორმა ვერტიკალურად განთავსდება */
+        gap: 10px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .community-input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
     }
 }
 @media (max-width: 270px) {

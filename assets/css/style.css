@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+    z-index: 99;
+}
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+.navbar_toggle {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.navbar_close {
+    display: none;
+    margin-bottom: 20px;
+}
+.navbar_close i {
+    font-size: 30px;
+    cursor: pointer;    
+}
+.navbar_menu {
+    display: flex;
+    gap: 45px;
+}
+.navbar_link {
+    color: #242323;
+    font-size: 17px;
+}
+.navbar_btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: #FEFEFE;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.navbar_btn:hover {
+    background-color: #4d4d4d;
+}
+.hero_section {
+    background-color: #F4F6F5;
+    min-height: 550px;
+    margin-top: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end; 
+    position: relative;
+    z-index: 5;
+}
+.hero-content {
+    align-self: center;
+    max-width: 500px;
+}
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+.highlight {
+    background-color: #ffe66d;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+}
+.hero-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.hero-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.hero-button:hover {
+    background-color: #4d4d4d;
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 600px;
+}
+.brands-section {
+    margin-top: 65px;
+    background-color: #EBD96B; /* ფონის ფერი, როგორც სურათზეა */
+    padding: 3rem 0;
+}
+.brands-container {
+    display: flex; /* Flexbox-ის გააქტიურება */
+    justify-content: space-between; /* ლოგოების თანაბრად განაწილება */
+    align-items: center; /* ლოგოების ვერტიკალურად გასწორება */
+    flex-wrap: wrap; /* საშუალებას აძლევს ლოგოებს, ახალ ხაზზე გადავიდნენ */
+    gap: 2rem; /* მობილურ ვერსიაზე დაშორება ლოგოებს შორის */
+}
+.brand-logo {
+    height: 50px; /* ლოგოების სიმაღლე */
+    filter: grayscale(100%); /* სურვილისამებრ, ლოგოების მონოქრომულობა */
+    opacity: 0.6; /* სურვილისამებრ, ლოგოების გამჭვირვალობა */
+    transition: opacity 0.3s ease; /* ანიმაცია გადატარებისას */
+}
+.brand-logo:hover {
+    opacity: 1; /* სრული გამჭვირვალობა გადატარებისას */
+    filter: grayscale(0%); /* ფერების დაბრუნება გადატარებისას */
+}
+@media screen and (max-width: 1150px) {
+    .hero_section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 450px;
+    }
+    .hero-content {
+        align-self: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .hero-image  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-image img {
+        width: 90%;
+        margin-top: 3rem;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .navbar_toggle {
+        display: flex;
+    }
+    .navbar_close {
+        display: flex;
+    }
+    .navbar_menu {
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        left: -100%;
+        transition: all 0.3s ease-in-out;
+        flex-direction: column;
+        z-index: 99px;
+        justify-content: center;
+        align-items: center;
+        background-color: #E6C744;
+        padding: 0px;
+        margin: 0px;
+    }
+    .active {
+        left: 0px;
+    }
+    .navbar_link {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+@media (max-width: 768px) {
+    .brands-container {
+        justify-content: center; /* ლოგოების ცენტრში განთავსება */
+        gap: 2rem;
+    }
+    .brand-logo {
+        height: 30px; /* ლოგოების ზომის შემცირება მობილურზე */
+    }
+}
+@media (max-width: 580px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 270px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .navbar_logo span { display: none; }
+}

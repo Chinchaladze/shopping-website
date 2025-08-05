@@ -1,176 +1,418 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* ძირითადი სტილები */
 * {
-    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
     font-family: "Poppins", sans-serif;
 }
 body {
+    padding: 0;
     margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: #272C34;
-    color: #fff;
 }
-.breadcrumb {
-    font-size: 14px;
-    color: #aaa;
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
-.breadcrumb a {
-    color: #aaa;
-    text-decoration: none;
-    margin-right: 5px;
-    transition: color 0.3s ease;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+    z-index: 99;
 }
-.breadcrumb a:hover {
-    color: #EB1B24;
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
 }
-.breadcrumb span {
-    margin: 0 5px;
+.navbar_toggle {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
 }
-/* ძირითადი შიგთავსი */
-.main-content {
+.navbar_close {
+    display: none;
+    margin-bottom: 20px;
+}
+.navbar_close i {
+    font-size: 30px;
+    cursor: pointer;    
+}
+.navbar_menu {
+    display: flex;
+    gap: 45px;
+}
+.navbar_link {
+    color: #242323;
+    font-size: 17px;
+}
+.navbar_btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: #FEFEFE;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.navbar_btn:hover {
+    background-color: #4d4d4d;
+}
+.hero_section {
+    background-color: #F4F6F5;
+    min-height: 550px;
+    margin-top: 10px;
+    border-radius: 50px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    padding: 50px;
+    align-items: flex-end; 
     position: relative;
-    height: 100vh;
-    height: 100dvh; /* ეკრანის სიმაღლე - ჰედერისთვის საჭირო სივრცე */
+    z-index: 5;
 }
-.product-info {
-    z-index: 1; /* იმისთვის, რომ ტექსტი იყოს სურათის თავზე */
-    padding-left: 50px;
+.hero-content {
+    align-self: center;
+    max-width: 500px;
 }
-.product-info h1 {
-    font-size: 72px;
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+.highlight {
+    background-color: #ffe66d;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+}
+.hero-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.hero-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.hero-button:hover {
+    background-color: #4d4d4d;
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 600px;
+}
+.brands-section {
+    margin-top: 65px;
+    background-color: #EBD96B;
+    padding: 3rem 0;
+}
+.brands-container {
+    display: flex; 
+    justify-content: space-between; /* ლოგოების თანაბრად განაწილება */
+    align-items: center; /* ლოგოების ვერტიკალურად გასწორება */
+    flex-wrap: wrap; /* საშუალებას აძლევს ლოგოებს, ახალ ხაზზე გადავიდნენ */
+    gap: 2rem; /* მობილურ ვერსიაზე დაშორება ლოგოებს შორის */
+}
+.brand-logo {
+    height: 50px; 
+    filter: grayscale(100%); /* სურვილისამებრ, ლოგოების მონოქრომულობა */
+    opacity: 0.6; /* სურვილისამებრ, ლოგოების გამჭვირვალობა */
+    transition: opacity 0.3s ease; /* ანიმაცია გადატარებისას */
+}
+.brand-logo:hover {
+    opacity: 1; /* სრული გამჭვირვალობა გადატარებისას */
+    filter: grayscale(0%); /* ფერების დაბრუნება გადატარებისას */
+}
+.arrivals-section {
+    padding: 4rem 0;
+}
+.section-title {
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 0;
-    color: #F7E6D3;
+    text-align: left;
+    margin-bottom: 2rem;
 }
-.product-info .subtitle {
-    font-size: 20px;
-    color: #aaa;
-    margin-top: 10px;
+.section-title-highlight {
+    background-color: #ffe66d;
+    padding: 0 0.5rem;
+    border-radius: 5px;
 }
-.product-info .price {
-    font-size: 48px;
-    color: #EB1B24;
-    margin-top: 20px;
-    margin-bottom: 30px;
+.cards-container {
+    display: flex; /* Flexbox-ის გააქტიურება */
+    justify-content: space-between; /* ბარათების თანაბრად განაწილება */
+    gap: 2rem; /* დაშორება ბარათებს შორის */
 }
-.buttons .add-to-cart {
-    background-color: #EB1B24;
+.card {
+    border-radius: 20px;
+    overflow: hidden; /* სურათის კუთხეების მომრგვალება */
+    display: flex;
+    flex-direction: column;
+}
+.card-image-wrapper {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.explore-link {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.explore-link .arrow {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.explore-link:hover .arrow {
+    transform: translateX(5px);
+}
+.community-section {
+    background-color: #E5C643; /* ყვითელი ფონი */
+    padding: 70px 0;
+    text-align: center; /* ტექსტის ცენტრში გასწორება */
+}
+.community-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* შიგნით არსებული ელემენტების ცენტრში გასწორება */
+    gap: 0.5rem; /* დაშორება ელემენტებს შორის */
+}
+.community-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin: 0px;
+}
+.community-subtitle {
+    font-size: 18px;
+    color: #FFFCF8;
+}
+.community-form {
+    display: flex;
+    gap: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden; /* ფორმის კუთხეების მომრგვალება */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+.community-input {
+    flex: 1; /* იკავებს დარჩენილ სივრცეს */
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+.community-button {
+    background-color: #000;
     color: #fff;
     border: none;
-    padding: 15px 30px;
-    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
-.buttons .add-to-cart:hover {
-    background-color: #eb1b2547;
+.community-button:hover {
+    background-color: #4d4d4d;
 }
-.buttons .more-details {
-    background: none;
+.main-footer {
+    background-color: #000;
     color: #fff;
-    border: 1px solid #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
+    padding: 5rem 0;
 }
-.buttons .more-details:hover {
-    background-color: #ffffff47;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* სვეტების ზომების განაწილება */
+    gap: 2rem;
 }
-.product-image img {
-    height: 100%; /* სურათის ზომა ეკრანის სიმაღლეზე */
-    width: auto;
-    opacity: 0.2; /* გამჭვირვალობა */
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
-@media (max-width: 1280px) {
-    .main-content {
-        flex-direction: column; /* ელემენტები ერთმანეთის ქვეშ განთავსდება */
-        text-align: center;
-        justify-content: center;
-        height: auto;
+.footer-description {
+    color: #a0a0a0;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+.footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #fff;
+}
+/* responsive სტილები */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr; /* ტაბლეტზე ორი სვეტი */
     }
-    .product-info {
-        padding: 20px;
-        order: 2; /* ინფორმაცია მოთავსდება სურათის ქვემოთ */
-    }
-    .product-image {
-        position: relative;
-        top: auto;
-        transform: none;
-        order: 1; /* სურათი მოთავსდება ინფორმაციის ზემოთ */
-        width: 100%;
-        text-align: center;
+    
+    .footer-column-1 {
+        grid-column: 1 / span 2; /* პირველი სვეტი მთელ სიგანეზე გაიშლება */
+        margin-bottom: 2rem;
     }
 }
-@media (max-width: 890px) {
-    .breadcrumb {
-        padding: 10px 30px;
-    }
-    .product-info h1 {
-        font-size: 56px;
-    }
-    .product-info .subtitle {
-        font-size: 18px;
-    }
-    .product-info .price {
-        font-size: 40px;
-    }
-}
-
-/* ტაბლეტებისთვის და მობილურებისთვის (მაქსიმალური სიგანე 768px) */
-@media (max-width: 768px) {
-    .breadcrumb {
-        padding: 10px 20px;
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* მობილურზე ერთი სვეტი */
         text-align: center;
     }
-    .product-image img {
-        height: auto;
-        width: 90%;
+    
+    .footer-column-1 {
+        grid-column: unset;
     }
-    .product-info h1 {
-        font-size: 48px;
+    
+    .social-links {
+        justify-content: center; /* სოციალური ლინკების ცენტრში განთავსება */
     }
-    .product-info .subtitle {
-        font-size: 16px;
-    }
-    .product-info .price {
-        font-size: 36px;
-    }
-    .buttons {
-        display: flex;
+}
+@media screen and (max-width: 1150px) {
+    .hero_section {
         flex-direction: column;
         align-items: center;
-        justify-content: center; 
-        gap: 20px;
+        justify-content: space-between;
+        min-height: 450px;
     }
-    .buttons > * {
-        width: 200px;
+    .hero-content {
+        align-self: center;
+        text-align: center;
+        padding: 20px;
     }
-    .buttons .more-details {
-        margin-left: 0;
+    .hero-image  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-image img {
+        width: 90%;
+        margin-top: 3rem;
     }
 }
-
-/* მობილურებისთვის (მაქსიმალური სიგანე 480px) */
-@media (max-width: 480px) {
-    .breadcrumb {
-        padding: 10px 15px;
+@media screen and (max-width: 1100px) {
+    .navbar_toggle {
+        display: flex;
     }
-    .product-info h1 {
-        font-size: 36px;
+    .navbar_close {
+        display: flex;
+        position: absolute;
+        top: 45px;
+        right: 25px;
     }
-    .product-info .price {
-        font-size: 28px;
+    .navbar_menu {
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        top: 0px;
+        left: -100%;
+        transition: all 0.3s ease-in-out;
+        flex-direction: column;
+        z-index: 99px;
+        justify-content: center;
+        align-items: center;
+        background-color: #E6C744;
+        padding: 0px;
+        margin: 0px;
     }
-    .buttons button {
-        padding: 12px 20px;
-        font-size: 14px;
+    .active {
+        left: 0px;
     }
+    .navbar_link {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+@media (max-width: 990px) {
+    .cards-container {
+        flex-direction: column; /* ბარათები ერთმანეთის ქვეშ განთავსდება */
+        gap: 1.5rem;
+    }
+    .card {
+        flex: unset; /* ვაუქმებთ flex: 1-ს */
+        width: 100%; /* ბარათის სიგანე სრულდება */
+    }
+}
+@media (max-width: 768px) {
+    .brands-container {
+        justify-content: center; /* ლოგოების ცენტრში განთავსება */
+        gap: 2rem;
+    }
+    .brand-logo {
+        height: 30px; /* ლოგოების ზომის შემცირება მობილურზე */
+    }
+}
+@media (max-width: 580px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 576px) {
+    .community-title {
+        font-size: 2rem;
+    }
+    .community-form {
+        flex-direction: column; /* მობილურზე ფორმა ვერტიკალურად განთავსდება */
+        gap: 10px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .community-input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}
+@media (max-width: 270px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .navbar_logo span { display: none; }
 }

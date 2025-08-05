@@ -3,30 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Product Page By Irakli Chinchaladze</title>
+    <title>Shopping Website By Irakli Chinchaladze</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <main class="main-content">
-            <div class="product-info">
-                <div class="breadcrumb">
-                    <a href="#">Home</a>
-                    <span>></span>
-                    <a href="#">Category</a>
-                    <span>></span>
-                    <a href="#">boAt Headphones 2022</a>
-                </div>
-                <h1>boAt Rockerz 460</h1>
-                <p class="subtitle">BLUETOOTH HEADPHONES</p>
-                <p class="price">$199</p>
-                <div class="buttons">
-                    <button class="add-to-cart">Add to cart</button>
-                    <button class="more-details">More Details</button>
-                </div>
+    <div class="container">
+    <nav class="navbar">
+        <a href="#" class="navbar_logo">
+            <img src="assets/images/logo.svg" alt="logo">
+            <span>FASHION</span>
+        </a>
+        <div class="navbar_toggle">
+            <i class="ri-apps-2-line"></i>
+        </div>
+        <ul class="navbar_menu">
+            <li class="navbar_close"><i class="ri-close-large-line"></i></li>
+            <li class="navbar_list">
+                <a href="#" class="navbar_link">CATALOGUE</a>
+            </li>
+            <li class="navbar_list">
+                <a href="#" class="navbar_link">FASHION</a>
+            </li>
+            <li class="navbar_list">
+                <a href="#" class="navbar_link">FAVOURITE</a>
+            </li>
+            <li class="navbar_list">
+                <a href="#" class="navbar_link">LIFESTYLE</a>
+            </li>
+            <li class="navbar_list">
+                <a href="#" class="navbar_link navbar_btn">SIGN UP</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+    <div class="container">
+    <section class="hero_section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+            LET'S<br>
+            EXPLORE<br>
+            <span class="highlight">UNIQUE</span><br>
+            CLOTHES.
+            </h1>
+            <p class="hero-subtitle">Live for Influential and Innovative fashion!</p>
+            <a href="#" class="hero-button">Shop Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/hero-photo.png" alt="Fashion model">
+        </div>        
+    </section>
+    </div>
+    <section class="brands-section">
+    <div class="container brands-container">
+        <img src="assets/images/hm-logo.png" alt="H&M Logo" class="brand-logo">
+        <img src="assets/images/obey-logo.png" alt="Obey Logo" class="brand-logo">
+        <img src="assets/images/shopify-logo.png" alt="Shopify Logo" class="brand-logo">
+        <img src="assets/images/lacoste-logo.png" alt="Lacoste Logo" class="brand-logo">
+        <img src="assets/images/levis-logo.png" alt="Levi's Logo" class="brand-logo">
+        <img src="assets/images/amazon-logo.png" alt="Amazon Logo" class="brand-logo">
+    </div>
+    </section>
+    <section class="arrivals-section">
+    <div class="container">
+        <h2 class="section-title">
+        <span class="section-title-highlight">NEW</span> ARRIVALS
+        </h2>
+        <div class="cards-container">
+        <div class="card">
+            <div class="card-image-wrapper">
+            <img src="assets/images/hoodies.png" alt="Hoodies" class="card-image">
             </div>
-            <div class="product-image">
-                <img src="assets/images/headphones.png" alt="boAt Rockerz 460 Headphones">
+            <div class="card-content">
+            <h3 class="card-title">Hoodies & Sweatshirt</h3>
+            <a href="#" class="explore-link">Explore Now! <span class="arrow">→</span></a>
             </div>
-    </main>
+        </div>
+        <div class="card">
+            <div class="card-image-wrapper">
+            <img src="assets/images/coats.png" alt="Coats & Parkas" class="card-image">
+            </div>
+            <div class="card-content">
+            <h3 class="card-title">Coats & Parkas</h3>
+            <a href="#" class="explore-link">Explore Now! <span class="arrow">→</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image-wrapper">
+            <img src="assets/images/tees.png" alt="Tees & T-Shirt" class="card-image">
+            </div>
+            <div class="card-content">
+            <h3 class="card-title">Tees & T-Shirt</h3>
+            <a href="#" class="explore-link">Explore Now! <span class="arrow">→</span></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <section class="community-section">
+    <div class="container">
+        <div class="community-content">
+        <h2 class="community-title">JOIN SHOPPING COMMUNITY TO<br>GET MONTHLY PROMO</h2>
+        <p class="community-subtitle">Type your email down below and be young wild generation</p>
+        
+        <form class="community-form">
+            <input type="email" placeholder="Add your email here" class="community-input">
+            <button type="submit" class="community-button">SEND</button>
+        </form>
+        </div>
+    </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-column-1">
+        <h3 class="footer-logo">FASHION</h3>
+        <p class="footer-description">Complete your style with awesome<br>clothes from us.</p>
+        </div>
+        <div class="footer-column">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Careers</a></li>
+        </ul>
+        </div>
+        <div class="footer-column">
+        <h4 class="footer-heading">Quick Link</h4>
+        <ul class="footer-links">
+            <li><a href="#">Share Location</a></li>
+            <li><a href="#">Orders Tracking</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+        </div>
+        <div class="footer-column">
+        <h4 class="footer-heading">Legal</h4>
+        <ul class="footer-links">
+            <li><a href="#">Terms & conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        </div>
+    </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
